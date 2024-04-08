@@ -1,10 +1,10 @@
 from flask import Flask, redirect, url_for, session, jsonify
 from authlib.integrations.flask_client import OAuth
 import os
-from dotenv import load_dotenv
+
 
 # Load environment variables from .env file
-load_dotenv()
+
 
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'default_secret_key')
